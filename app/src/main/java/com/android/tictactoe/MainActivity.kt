@@ -18,6 +18,24 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.activity_main)
 
         enableEdgeToEdge()
+
+        val buttons = Array(3) { row ->
+            Array(3) { col ->
+                findViewById<Button>(
+                    resources.getIdentifier(
+                        "button${row * 3 + col + 1}",
+                        "id",
+                        packageName
+                    )
+                )
+            }
+        }
+        val gameStatus = findViewById<TextView>(R.id.gameStatus)
+
+        gameBoard = GameBoard(buttons, gameStatus)
+
+        findViewById<Button>(R.id.resetButton).setOnClickListener { gameBoard.startGame() }
+        gameBoard.startGame()
     }
 }
 
