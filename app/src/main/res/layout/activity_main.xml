@@ -1,0 +1,88 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/gameStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/heebo_black"
+        android:text="Player X"
+        android:textColor="#000000"
+        android:textColorHighlight="#FD00FD"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="3"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Buttons for the Tic Tac Toe grid -->
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/GridButtonStyle" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/GridButtonStyle" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/GridButtonStyle" />
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/GridButtonStyle" />
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/GridButtonStyle" />
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/GridButtonStyle" />
+
+        <Button
+            android:id="@+id/button7"
+            style="@style/GridButtonStyle" />
+
+        <Button
+            android:id="@+id/button8"
+            style="@style/GridButtonStyle" />
+
+        <Button
+            android:id="@+id/button9"
+            style="@style/GridButtonStyle" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="157dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center"
+        android:text="Reset"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
