@@ -5,13 +5,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.tictactoe"
-    compileSdk = 34
+    namespace = "com.android.tictactoe"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.tictactoe"
-        minSdk = 25
-        targetSdk = 34
+        applicationId = "com.android.tictactoe"
+        minSdk = 24
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -56,4 +56,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.androidx.constraintlayout)
+
+
+
 }
